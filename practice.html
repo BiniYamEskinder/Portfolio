@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiniYam Freshman</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--
+        <link rel="shortcut icon" href="biniyam.jpg" type="image/x-icon">
+    -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="biniyam.jpg" type="image/x-icon">
+    <!--
+        Date:
+            June 15, 2026 - June 19, 2026 G.C.
+            Sene 8, 2018 - Sene 12, 2018 E.C.
+    -->
+</head>
+
+<body>
+    <!--The top navigation section-->
+    <nav class="theMainTopNav" id="theMainTopNav">
+        <a href="#about">
+            <div class="About" id="theMainTopNavAbout">
+                <label for="About_nav_label">About</label>
+            </div>
+        </a>
+        <a href="#project_section">
+            <div class="Projects" id="theMainTopNavProjects">
+                <label for="Projects_nav_label">Projects</label>
+            </div>
+        </a>
+        <a href="#skills_section">
+            <div class="Skills" id="theMainTopNavSkills">
+                <label for="Skils_nav_label">Skills</label>
+            </div>
+        </a>
+        <!--
+        <div class="Experience" id="Experience">
+            <p>Experience</p>
+        </div>
+        -->
+        <a href="#Contact_section">
+            <div class="Contact" id="theMainTopNavContact">
+                <label for="Contact_nav_label">Contact</label>
+            </div>
+        </a>
+
+        <div class="label_for_theMainTopNav">
+            <input type="radio" name="top_main_nav" id="About_nav_label">
+            <input type="radio" name="top_main_nav" id="Projects_nav_label">
+            <input type="radio" name="top_main_nav" id="Skils_nav_label">
+            <input type="radio" name="top_main_nav" id="Contact_nav_label">
+        </div>
+    </nav>
+
+    <nav id="extra_nav_for_phone">
+        <h3>B<span class="small_title">ini</span>Y<span class="small_title">am</span></h3>
+        <div id="three_dot" style="cursor: pointer;">&#9776;</div>
+        <div id="X_dot" style="display: none; cursor: pointer;">X</div>
+    </nav>
+
+    <div id="extra_nav_list_mainBox">
+        <a href="#about">
+            <div class="About" id="About" class="to_delete_nav">
+                <p>About</p>
+            </div>
+        </a>
+        <a href="#project_section">
+            <div class="Projects" id="Projects" class="to_delete_nav">
+                <p>Projects</p>
+            </div>
+        </a>
+        <a href="#skills_section">
+            <div class="Skills" id="Skills" class="to_delete_nav">
+                <p>Skills</p>
+            </div>
+        </a>
+        <!--
+        <div class="Experience" id="Experience">
+            <p>Experience</p>
+        </div>
+        -->
+        <a href="#Contact_section">
+            <div class="Contact" id="Contact" class="to_delete_nav">
+                <p>Contact</p>
+            </div>
+        </a>
+    </div>
+
+
+
+    <!--Page up button at the right bottom of page-->
+    <a href="#Home">
+        <div class="page_up_button">
+            <p>⬆️</p>
+        </div>
+    </a>
+
+
+
+    <!--The home section-->
+    <div class="mainHome" id="Home">
+        <video class="homeBg2" src="bg2.mp4" autoplay muted loop></video>
+        <a href="#Contact_section">
+            <div class="availableForWork">
+                <div class="greenLight"></div> Available for work
+            </div>
+        </a>
+
+        <h1>Creative Developer</h1>
+        <p class="subTitleDescription description">I build digital experience that blend art with engineering <span
+                class="curser">|</span></p>
+
+        <div class="twoButtons">
+            <a href="#project_section">
+                <button class="my_work">
+                    View My work <span class="arrow_hover_animation">&rarr;</span>
+                </button>
+            </a>
+            <a href="#Contact_section">
+                <button class="get_me">
+                    Get In Touch
+                </button>
+            </a>
+        </div>
+        <a href="#about">
+            <div class="down_arrow">👇🏻</div>
+        </a>
+    </div>
+
+
+
+    <!--About section-->
+    <div id="about" class="about_section">
+
+        <div class="second_part_about_me">
+            <img src="biniyam.jpg" alt="BiniYam portfolio picture">
+        </div>
+        <div class="first_part_about_me">
+            <h1 class="h1_for_subtitle h1_based_on_page">About Me</h1>
+            <p class="about_me_description description">
+                I'm Biniyam Eskinder, a creative developer based in Ethiopia with 2+ years of experience building
+                digital products. I specialize in creating immersive web experience using modern technologies like
+                React.
+            </p>
+            <p class="about_me_description description">
+                When I'm not codding, you will find me exploring generative art, contributing to open-source projects. I
+                believe in the power of thoughtful design and clean code to solve real-wold problems.
+            </p>
+        </div>
+    </div>
+
+
+    <!--My projects section-->
+    <div id="project_section">
+        <h1 class="h1_for_project_section h1_based_on_page">Featured Projects</h1>
+        <p class="featured_projects_description description">
+            A section of projects that showcase my experience in design, development and creative problem-solving. <span
+                class="curser">|</span>
+        </p>
+        <div class="main_list_my_works">
+            <div class="listed_works">
+                <iframe src="https://biniyameskinder.github.io/BiniYamEthioTelecom/" frameborder="0"
+                    title="Ethio-telecom Advertisement"></iframe>
+                <div class="project_list_under">
+                    <h4>Ethiotelecom Advertisement Web-page</h4>
+                    <p class="description">
+                        I build this web-page to practice and develop our skill in useable format.
+                    </p>
+                </div>
+                <a href="https://biniyameskinder.github.io/BiniYamEthioTelecom/">
+                    <div class="pre_view">&#128064;</div>
+                </a>
+            </div>
+
+            <div class="listed_works">
+                <iframe src="https://biniyameskinder.github.io/BiniYam/" frameborder="0" title="Advertisement"></iframe>
+                <div class="project_list_under">
+                    <h4>Web-Agency Advertisement Web-page</h4>
+                    <p class="description">
+                        I build this web-page to practice and develop our skill in useable format.
+                    </p>
+                </div>
+                <a href="https://biniyameskinder.github.io/BiniYam/index.html">
+                    <div class="pre_view">&#128064;</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Skill section-->
+    <div id="skills_section">
+        <div class="skills_left_part">
+            <h1 class="h1_for_skills_section h1_based_on_page">Professionals Skills</h1>
+            <p class="skills_description description">
+                I have strong skills in HTML and CSS, with good knowledge of JavaScript. I focus on building clean,
+                responsive, and user-friendly websites that work well across different screen sizes. I enjoy creating
+                modern interfaces, solving front-end problems, and turning ideas into functional web experiences.
+            </p>
+            <div class="skills_in_depth">
+                <div class="skill_list skill_list_HTML">
+                    <h5>HTML 5</h5>
+                    <h5 class="skill_percentage">
+                        98%
+                    </h5>
+                </div>
+                <div class="skill_list skill_list_CSS">
+                    <h5>CSS</h5>
+                    <h5 class="skill_percentage">
+                        99%
+                    </h5>
+                </div>
+                <div class="skill_list skill_list_JAVASCRIPT">
+                    <h5>JAVASCRIPT</h5>
+                    <h5 class="skill_percentage">
+                        50%
+                    </h5>
+                </div>
+                <!--
+                <div class="skill_list skill_list_REACT">
+                    <h5>REACT</h5>
+                    <h5 class="skill_percentage">
+                        0%
+                    </h5>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="skills_right_part">
+            <img src="Biniyam portfolio ChatGpt.png" alt="skills_blueprint">
+        </div>
+    </div>
+
+
+
+    <!--Contact section-->
+    <div id="Contact_section">
+        <div class="contact_title">
+            <h1 class="h1_for_contact_section h1_based_on_page">Let's connect</h1>
+            <p class="contact_description description">
+                Have a project in mind? I'm always open to discussion new opportunities.
+            </p>
+        </div>
+
+        <div class="contact_way">
+            <form class="send_to_me" action="https://formsubmit.co/biniyameskinder12@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                <input type="hidden" name="_captcha" value="false">
+
+                <h5 class="to_me_question">Your Name</h5>
+                <input class="input_to_me" type="text" name="name" placeholder="Biniyam Eskinder" required>
+
+                <h5 class="to_me_question">Email</h5>
+                <input class="input_to_me" type="email" name="email" placeholder="example@gmail.com" required>
+
+                <h5 class="to_me_question">Message</h5>
+                <textarea class="input_to_me more_description_input" name="message"
+                    placeholder="Tell me about your project..." required></textarea>
+
+                <button class="send_message_button" type="submit">
+                    Send Message
+                </button>
+            </form>
+
+            <div class="get_my_info">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=biniyameskinder12@gmail.com" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="listed_my_info">
+                        <div class="listed_my_info_left">
+                            <!-- Gmail -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div class="listed_my_info_right">
+                            <p class="description">
+                                Email
+                            </p>
+                            <div class="write_my_link">
+                                biniyameskinder12@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="listed_my_info">
+                        <div class="listed_my_info_left">
+                            <!-- Location -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="11" cy="10" r="2" />
+                            </svg>
+                        </div>
+                        <div class="listed_my_info_right">
+                            <p class="description">
+                                Location
+                            </p>
+                            <div class="write_my_link">
+                                Adama, Ethiopia
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="listed_my_info">
+                        <div class="listed_my_info_left">
+                            <!-- Phone -->
+                            &#128241;
+                        </div>
+                        <div class="listed_my_info_right">
+                            <p class="description">
+                                Phone number
+                            </p>
+                            <div class="write_my_link">
+                                +251-92-738-4731
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bottom section -->
+    <div class="bottom_section">
+        <div class="copy_right">&copy; June 2026 Biniyam Eskinder.</div>
+        <div class="social_media_links">
+            <a href="https://github.com/BiniyamEskinder" target="_blank" rel="noopener noreferrer">
+                <div>GitHub</div>
+            </a>
+            <span class="separater">|</span>
+            <a href="https://www.linkedin.com/in/biniyam-eskinder-63bb69402" target="_blank" rel="noopener noreferrer">
+                <div>LinkedIn</div>
+            </a>
+            <span class="separater">|</span>
+            <a href="https://t.me/BininiYam123" target="_blank" rel="noopener noreferrer">
+                <div>Telegram</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
