@@ -44,6 +44,13 @@ body::after {
     pointer-events: none;
 }
 
+.for_border_designe {
+    position: fixed;
+    width: 100%;
+    border: 2.5px solid rgb(145, 0, 0);
+    z-index: 10;
+}
+
 button {
     color: white;
     background-color: rgb(145, 0, 0);
@@ -62,197 +69,80 @@ button:hover {
     color: silver;
 }
 
-/*
-
-body::before {
-    background: radial-gradient(white, black);
-    content: '';
-    border-radius: 50%;
-    width: 10vw;
-    opacity: .4;
-    height: 10vh;
-    position: fixed;
-    z-index: -1;
-    top: 30vh;
-    left: 30vw;
-    animation: backgroundAnimation infinite 5s linear;
-    box-shadow: 0px 0px 100px;
-}
-@keyframes backgroundAnimation {
-    0% {
-        left: 30vw;
-    }
-    25% {
-        left: 60vw;
-        top: 30vh;
-    }
-    50% {
-        left: 60vw;
-        top: 60vh;
-    }
-    75% {
-        left: 30vw;
-        top: 60vh;
-    }
-}
-*/
 /*The main navigation part
     1. mistake about background blur
     2. mistake about horizontal animation
 */
+
+
+/*The main top nav */
 .theMainTopNav {
-    width: 70%;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.575)
-        /*#ebb325*/
-    ;
+    background-color: hsla(0, 0%, 100%, 0.2);
     position: fixed;
-    top: 2vh;
+    z-index: 10;
     left: 50%;
-    border-radius: 50px;
-    display: flex;
+    top: 25px;
     transform: translateX(-50%);
-    flex-direction: row;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
     justify-content: space-around;
-    z-index: 3;
-    backdrop-filter: blur(2px);
-    animation: navigation linear .6s;
-}
-
-#extra_nav_for_phone {
-    display: none;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.356), rgba(107, 107, 107, 0.356), rgba(97, 30, 30, 0));
-    backdrop-filter: blur(2px);
-    z-index: 3;
-    padding: 10px 25px;
-}
-
-#extra_nav_list_mainBox {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
-    width: 100%;
-    position: fixed;
-    z-index: 3;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
     align-items: center;
-    padding: 10px;
-    top: 42px;
-    height: 100%;
+    backdrop-filter: blur(10px);
 }
 
-#extra_nav_list_mainBox div {
-    border: 1px solid rgba(145, 0, 0, .2);
-    width: 90vw;
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
-}
-
-#extra_nav_list_mainBox div::before {
-    content: '';
-    width: 0;
-    height: 100%;
-    background-color: rgb(145, 0, 0);
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    transition: .1s;
-}
-
-#extra_nav_list_mainBox div:hover::before {
-    width: 100%;
-}
-
-#three_dot {
+.theMainTopNav * {
     cursor: pointer;
 }
 
-/*
-@keyframes navigation {
+.theMainTopNav a {
+    display: none;
+    animation: diaplay_animation 1.5s linear;
+    border-left: 1px rgb(145, 0, 0) solid;
+    border-right: 1px rgb(145, 0, 0) solid;
+    padding: 0 20px;
+    transition: .5s;
+}
+
+#theMainTopNav .nav_displaying {
+    animation: diaplay_animation 1s linear;
+}
+
+.label_for_theMainTopNav {
+    display: none;
+}
+
+#theMainTopNav {
+    transition: .5s;
+}
+
+#theMainTopNav:hover {
+    width: 80%;
+}
+
+#theMainTopNav:hover .nav_displaying {
+    display: none;
+}
+
+#theMainTopNav:hover a {
+    display: block;
+}
+
+#theMainTopNav a:hover {
+    background-color: rgba(145, 0, 0, 0.1);
+}
+
+@keyframes diaplay_animation {
     from {
-        transform: translateY(-60px);
+        opacity: 0;
     }
+
     to {
-        transform: translateY(0px);
+        opacity: 100;
     }
 }
-*/
-.theMainTopNav div {
-    padding: 10px 25px;
-    position: relative;
-    cursor: pointer;
-}
 
-.theMainTopNav div::before {
-    box-shadow: inset 0 0 20px rgba(255, 246, 222, 0.322);
-    content: '';
-    width: 100%;
-    height: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    transition: .3s;
-}
-
-.theMainTopNav div::after {
-    box-shadow: inset 0 0 40px #555555;
-    content: '';
-    width: 100%;
-    height: 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: .01s;
-}
-
-.theMainTopNav div:hover::before,
-.theMainTopNav div:active::after {
-    height: 100%;
-}
-
-.theMainTopNav div:active {
-    color: #ffffff8a;
-}
-
-.theMainTopNav div:active label {
-    scale: .85;
-    cursor: pointer;
-}
-
-@media (max-width: 1000px) {
-    .theMainTopNav {
-        width: 100%;
-        top: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: linear-gradient(rgba(255, 255, 255, 0.356), rgba(107, 107, 107, 0.356), rgba(97, 30, 30, 0));
-    }
-
-    .theMainTopNav div:hover::before {
-        height: 5px;
-    }
-
-    .theMainTopNav div:active::before {
-        transition: 0;
-        background-color: rgb(145, 0, 0);
-    }
-
-    .theMainTopNav div:active::after {
-        height: 0;
-    }
-
-    .theMainTopNav div:hover {
-        color: #b6b6b6;
-    }
-}
 
 
 /*Page up button at the right bottom of page*/
@@ -275,13 +165,6 @@ body::before {
 .page_up_button p {
     font-size: 30px;
 }
-
-.label_for_theMainTopNav {
-    display: none;
-}
-
-
-
 
 /*The home section*/
 .mainHome {
@@ -397,7 +280,17 @@ h1 {
 
 @media (max-width: 520px) {
     .theMainTopNav {
-        display: none;
+        left: 25px;
+        transform: translateX(0);
+        overflow: hidden;
+    }
+
+    #theMainTopNav:hover {
+        width: 88%;
+    }
+
+    #theMainTopNav a {
+        border: none;
     }
 
     #extra_nav_for_phone {
@@ -547,10 +440,16 @@ h1 {
     background-color: rgba(32, 30, 30, 0.425);
 }
 
-.listed_works iframe {
+.listed_works .iframe {
     height: 12em;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+    overflow: hidden;
+}
+
+.listed_works .iframe img {
+    width: 100%;
+    height: 100%;
 }
 
 .project_list_under {
